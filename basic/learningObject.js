@@ -82,15 +82,57 @@ let newRect = {
   breadth: 5,
 };
 
-
-for(let key in newRect){
-  console.log(newRect[key] )
+for (let key in newRect) {
+  console.log(newRect[key]);
 }
 
-for(let key of Object.keys(newRect)){
+for (let key of Object.keys(newRect)) {
   console.log(key);
 }
 
-for(let key of Object.entries(newRect)){
+for (let key of Object.entries(newRect)) {
   console.log(key);
 }
+
+if ("color" in newRect) {
+  console.log("present");
+} else {
+  console.log("absent");
+}
+
+let src1 = {
+  a: 10,
+  b: 20,
+  c: 30,
+};
+
+let dest1 = {};
+
+for (let key in src1) {
+  dest1[key] = src1[key];
+}
+
+src1.a++;
+dest1.c--;
+console.log(src1);
+console.log(dest1);
+
+let src2 = {
+  a: 10,
+  b: 20,
+  c: 30,
+};
+let src3 = {
+  d:332,
+  var:32
+};
+
+let dest2 = Object.assign({}, src2, src3);
+console.log(src2);
+console.log(dest2);
+
+let dest3 = {...src2};
+src2.a+=4;
+console.log(src2);
+console.log(dest3);
+

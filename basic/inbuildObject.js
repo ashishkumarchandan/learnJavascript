@@ -56,19 +56,41 @@ temp.splice(0, 0, 1, 2, 3);
 numbers = numbers.concat(temp);
 console.log(numbers);
 
-
 const obj = { a: 1, b: 2, c: 3 };
 for (let prop in obj) {
-    console.log(prop, obj[prop]);
+  console.log(prop, obj[prop]);
 }
 
 const arr = [1, 2, 3];
 arr.forEach((item, index) => {
-    console.log(index, item);
+  console.log(index, item);
 });
 
 const arr2 = [4, 5, 6];
 for (let item of arr2) {
-    console.log(item);
-    if (item === 5) break; 
+  console.log(item);
+  if (item === 5) break;
 }
+
+let marks = [10, 20, 30, 40, 50, 60];
+let sliced = marks.slice(1, 5);
+console.log(marks);
+console.log(sliced);
+
+let first = [1, 2, 3, 4, 9];
+let second = [5, 6, 7, 8];
+let combined = [...first, ...second];
+console.log(combined);
+function sum(a, b, c) {
+  return a + b + c;
+}
+const numbers1 = [1, 2, 3];
+const result = sum(...numbers1);
+console.log(result);
+
+let numbers2 = [9, 45, 2, 765, 123, -3];
+numbers2.sort((a, b) => a - b);
+console.log(numbers2);
+numbers2.reverse();
+console.log(numbers2);
+

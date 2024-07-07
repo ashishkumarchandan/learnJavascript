@@ -56,21 +56,19 @@ temp.splice(0, 0, 1, 2, 3);
 numbers = numbers.concat(temp);
 console.log(numbers);
 
-// 1. for...in (for object properties)
+
 const obj = { a: 1, b: 2, c: 3 };
 for (let prop in obj) {
     console.log(prop, obj[prop]);
 }
 
-// 2. forEach (for array elements)
 const arr = [1, 2, 3];
 arr.forEach((item, index) => {
     console.log(index, item);
 });
 
-// 3. for...of (for iterable objects)
 const arr2 = [4, 5, 6];
 for (let item of arr2) {
     console.log(item);
-    if (item === 5) break; // You can use break here
+    if (item === 5) break; 
 }

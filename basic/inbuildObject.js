@@ -94,3 +94,22 @@ console.log(numbers2);
 numbers2.reverse();
 console.log(numbers2);
 
+let numbers3 = [1, 2, 3, -4, -5];
+// let filtered1 = numbers3.filter((item) => item > 0);
+// console.log(filtered1);
+
+let filtered2 = numbers3.filter((item) => item < 0);
+console.log(filtered2);
+
+let numbers4 = [1, 2, 3, 4, 5];
+let mapped = numbers4.map((item) => `item ${item}`);
+console.log(mapped);
+
+let items = numbers3.filter((item) => item > 0).map((num) => ({ value: num }));
+console.log(items);
+// let items1 = numbers3
+//   .filter((item) => item > 0)
+//   .map((num) => {
+//     return { value: num };
+//   });
+// console.log(items1);

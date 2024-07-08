@@ -78,3 +78,23 @@ try {
   console.log(e.message);
 }
 console.log(b);
+
+function walk() {
+  var c = 5;
+  console.log(c);
+}
+try {
+  walk();
+  console.log(c);
+} catch (e) {
+  console.log(e.message);
+}
+
+function abc(a, b = 7, c) {
+  console.log(a, b, c);
+}
+abc(1, undefined, 3);
+
+let one = [-1, -2, -3, -4];
+let ansSum = one.reduce((accumulator, currentVal) => accumulator + currentVal, 0);
+console.log(ansSum);

@@ -96,5 +96,8 @@ function abc(a, b = 7, c) {
 abc(1, undefined, 3);
 
 let one = [-1, -2, -3, -4];
-let ansSum = one.reduce((accumulator, currentVal) => accumulator + currentVal, 0);
+let ansSum = one.reduce(
+  (accumulator, currentVal) => accumulator + currentVal,
+  0
+);
 console.log(ansSum);
